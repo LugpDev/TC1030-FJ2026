@@ -3,8 +3,7 @@
 
 #include "Vagon.h"
 
-class VagonCarga : public Vagon
-{
+class VagonCarga : public Vagon {
 private:
   double pesom3;
   double volumen;
@@ -12,6 +11,7 @@ private:
 public:
   VagonCarga(double _volumen, double _pesom3);
   double calcularPeso();
+  void mostrar(std::ostream &os);
 };
 
 #endif // __VAGONCARGA_H__
