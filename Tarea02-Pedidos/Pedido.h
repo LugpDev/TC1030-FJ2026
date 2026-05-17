@@ -12,7 +12,9 @@ private:
 public:
   Pedido(vector<Producto *> _productos);
   void listarProductos();
+  vector<Producto *> getProductos();
   void operator+(Producto *producto);
+  Pedido operator+(Pedido *otro);
 };
 
 #endif

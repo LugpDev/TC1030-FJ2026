@@ -28,3 +28,16 @@ void Pedido::listarProductos() {
 }
 
 void Pedido::operator+(Producto *producto) { agregarProducto(producto); }
+
+vector<Producto *> Pedido::getProductos() { return productos; }
+
+Pedido Pedido::operator+(Pedido *otro) {
+  vector<Producto *> productosCombinados = productos;
+  vector<Producto *> otrosProductos = otro->getProductos();
+
+  for (Producto *producto : otrosProductos) {
+    productosCombinados.push_back(producto);
+  }
+
+  return Pedido(productosCombinados);
+}
