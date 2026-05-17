@@ -1,3 +1,6 @@
+#ifndef BEBIDA_H
+#define BEBIDA_H
+
 #include "Producto.h"
 
 class Bebida : public Producto {
@@ -12,3 +15,5 @@ public:
   double getPrecio();
   double getContenidoCalorico();
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef PRODUCTO_H
+#define PRODUCTO_H
+
 #include <string>
 
 using namespace std;
@@ -14,3 +17,5 @@ public:
   virtual double getPrecio() = 0;
   virtual double getContenidoCalorico() = 0;
 };
+
+#endif
