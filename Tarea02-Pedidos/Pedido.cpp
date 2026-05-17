@@ -26,3 +26,5 @@ void Pedido::listarProductos() {
          << producto->getContenidoCalorico() << endl;
   }
 }
+
+void Pedido::operator+(Producto *producto) { agregarProducto(producto); }

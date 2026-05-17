@@ -11,5 +11,8 @@ int main() {
   Pedido pedido({&bebida1, &hamburguesa1});
   pedido.listarProductos();
 
+  pedido + new Bebida("Agua", 0.5, 0, true);
+  pedido.listarProductos();
+
   return 0;
 }
