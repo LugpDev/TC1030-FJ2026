@@ -6,3 +6,6 @@ Producto::Producto(string _nombre) {
 }
 
 string Producto::getNombre() { return nombre; }
+
+bool Producto::operator<(Producto &otro) { return precio < otro.precio; }
+bool Producto::operator>(Producto &otro) { return precio > otro.precio; }

@@ -16,6 +16,8 @@ public:
   string getNombre();
   virtual double getPrecio() = 0;
   virtual double getContenidoCalorico() = 0;
+  bool operator<(Producto &otro);
+  bool operator>(Producto &otro);
 };
 
 #endif
