@@ -9,7 +9,7 @@ protected:
   double contenidoCalorico;
 
 public:
-  Producto(string _nombre, double _precio);
+  Producto(string _nombre);
   string getNombre();
   virtual double getPrecio() = 0;
   virtual double getContenidoCalorico() = 0;
