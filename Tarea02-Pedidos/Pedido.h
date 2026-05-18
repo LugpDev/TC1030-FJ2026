@@ -12,9 +12,9 @@ private:
 public:
   Pedido(vector<Producto *> _productos);
   void listarProductos();
-  vector<Producto *> getProductos();
+  vector<Producto *> getProductos() const;
   void operator+(Producto *producto);
-  Pedido operator+(Pedido *otro);
+  Pedido operator+(const Pedido &otro);
 };
 
 #endif

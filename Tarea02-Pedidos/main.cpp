@@ -12,17 +12,18 @@ int main() {
   Pedido pedido({&bebida1, &hamburguesa1});
   pedido.listarProductos();
 
-  pedido + new Bebida("Agua", 0.5, 0, true);
+  Bebida agua("Agua", 0.5, 0, true);
+  pedido + &agua;
   pedido.listarProductos();
 
-  cout << "Comparando precios: " << endl;
-  cout << bebida1.getNombre() << " es "
-       << (bebida1 > hamburguesa1 ? "más cara" : "más barata") << " que "
+  cout << "Comparando contenido calórico: " << endl;
+  cout << bebida1.getNombre() << " tiene "
+       << (bebida1 > hamburguesa1 ? "más calorías" : "menos calorías") << " que "
        << hamburguesa1.getNombre() << endl;
 
   Pedido pedido2({new Bebida("Jugo de Naranja", 0.5, 300, false)});
 
-  Pedido pedidoCombinado = pedido + &pedido2;
+  Pedido pedidoCombinado = pedido + pedido2;
   pedidoCombinado.listarProductos();
 
   return 0;
