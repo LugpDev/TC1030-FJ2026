@@ -77,6 +77,7 @@ void Tren::mostrarReservas() {
   cout << "Reservas realizadas:" << endl;
   for (Reserva *r : reservas) {
     cout << "Folio: " << r->getFolio() << ", Nombre: " << r->getNombre()
-         << ", Asientos: " << r->getAsientos() << endl;
+         << ", Asientos: " << r->getAsientos()
+         << ", Costo: " << r->getPrecioTotal() << endl;
   }
 }

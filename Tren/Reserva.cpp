@@ -9,3 +9,4 @@ Reserva::Reserva(string _nombre, int _folio, int _asientos) {
 string Reserva::getNombre() { return nombre; };
 int Reserva::getFolio() { return folio; };
 int Reserva::getAsientos() { return asientos; };
+double Reserva::getPrecioTotal() { return asientos * PRECIO_BOLETO; };
