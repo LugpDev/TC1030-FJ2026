@@ -14,12 +14,17 @@ int main() {
   tren->agregarVagon(new VagonCarga(50, 2));
   tren->agregarVagon(new VagonPasajeros(2));
 
+  cout << "========================================" << endl;
+  cout << "Info de los vagones" << endl;
+  cout << "========================================" << endl;
   VagonCarga *v1 = new VagonCarga(0, 3);
   cout << v1;
   *tren + v1;
+  cout << "========================================" << endl;
   VagonPasajeros *v2 = new VagonPasajeros(3);
   cout << v2;
   *tren + v2;
+  cout << "========================================\n" << endl;
 
   cout << "========================================" << endl;
   cout << "Comparación de pesos" << endl;
