@@ -1,0 +1,13 @@
+# Compiled object files
+*.o
+
+# Executable
+tren
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
