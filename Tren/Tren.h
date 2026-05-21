@@ -21,6 +21,7 @@ public:
   void operator+(Vagon *nuevoVagon);
   void cargar(int _i, double _carga);
   void reservar(string _nombre, int _asientos);
+  void mostrarReservas();
 };
 
 #endif // __TREN_H__

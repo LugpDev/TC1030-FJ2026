@@ -45,11 +45,17 @@ int main() {
   cout << "========================================\n" << endl;
 
   cout << "========================================" << endl;
-  cout << "Reservas" << endl;
+  cout << "Haciendo las reservas" << endl;
   cout << "========================================" << endl;
-  tren->reservar("Juan", 9);
-  tren->reservar("Luis", 1);
-  tren->reservar("Carlos", 10); // Debe mostrar error
+  tren->reservar("Juan", 7);
+  tren->reservar("Luis", 2);
+  tren->reservar("Carlos", 3); // Debe mostrar error
+  cout << "========================================\n" << endl;
+
+  cout << "========================================" << endl;
+  cout << "Reservas guardadas" << endl;
+  cout << "========================================" << endl;
+  tren->mostrarReservas();
   cout << "========================================\n" << endl;
 
   delete tren;

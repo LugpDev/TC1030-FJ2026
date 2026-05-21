@@ -72,3 +72,11 @@ void Tren::reservar(string _nombre, int _asientos) {
          << ", Asientos disponibles: " << total << endl;
   }
 }
+
+void Tren::mostrarReservas() {
+  cout << "Reservas realizadas:" << endl;
+  for (Reserva *r : reservas) {
+    cout << "Folio: " << r->getFolio() << ", Nombre: " << r->getNombre()
+         << ", Asientos: " << r->getAsientos() << endl;
+  }
+}
