@@ -1,6 +1,7 @@
 #ifndef __TREN_H__
 #define __TREN_H__
 
+#include "Reserva.h"
 #include "VagonCarga.h"
 #include <vector>
 
@@ -11,6 +12,7 @@ private:
   double locomotora;
   double vagoncola;
   vector<Vagon *> vagones;
+  vector<Reserva *> reservas;
 
 public:
   Tren(double _locomotora, double _vagoncola);

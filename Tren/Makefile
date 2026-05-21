@@ -1,7 +1,7 @@
 CXX      = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra
 TARGET   = tren
-SRCS     = main.cpp Tren.cpp Vagon.cpp VagonCarga.cpp VagonPasajeros.cpp
+SRCS     = main.cpp Tren.cpp Vagon.cpp VagonCarga.cpp VagonPasajeros.cpp Reserva.cpp
 OBJS     = $(SRCS:.cpp=.o)
 
 $(TARGET): $(OBJS)

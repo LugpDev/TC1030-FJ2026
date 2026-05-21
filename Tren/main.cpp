@@ -37,6 +37,8 @@ int main() {
   cout << "Tren" << endl;
   cout << "Peso total del tren: " << tren->pesoTotal() << endl;
 
+  tren->reservar("Juan", 2);
+
   delete tren;
   return 0;
 }

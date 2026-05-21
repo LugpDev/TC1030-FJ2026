@@ -1,4 +1,5 @@
 #include "Tren.h"
+#include "Reserva.h"
 #include "VagonCarga.h"
 #include "VagonPasajeros.h"
 
@@ -43,7 +44,10 @@ void Tren::reservar(string _nombre, int _asientos) {
   }
 
   if (_asientos <= total) {
-
+    int folio = reservas.size() + 1;
+    Reserva *reserva = new Reserva(_nombre, folio, _asientos);
+    reservas.push_back(reserva);
+    cout << "Reserva realizada con éxito. Folio: " << folio << endl;
   }
 
   else
