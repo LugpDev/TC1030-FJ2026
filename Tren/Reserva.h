@@ -10,6 +10,7 @@ private:
   string nombre;
   int folio;
   int asientos;
+  int precioTotal;
 
   static const int PRECIO_BOLETO = 100;
 
@@ -18,7 +19,7 @@ public:
   string getNombre();
   int getFolio();
   int getAsientos();
-  double getPrecioTotal();
+  int getPrecioTotal();
 };
 
 #endif // !RESERVA_H
