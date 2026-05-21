@@ -21,23 +21,36 @@ int main() {
   cout << v2;
   *tren + v2;
 
+  cout << "========================================" << endl;
+  cout << "Comparación de pesos" << endl;
+  cout << "========================================" << endl;
   if (*v1 > v2)
     cout << "Vagón de carga pesa más" << endl;
   else
     cout << "Vagón de pasajeros pesa más" << endl;
+  cout << "========================================\n" << endl;
 
-  cout << "Tren" << endl;
-  cout << "Peso total del tren: " << tren->pesoTotal() << endl;
+  cout << "========================================" << endl;
+  cout << "Pesos del tren" << endl;
+  cout << "========================================" << endl;
+  cout << "Peso inicial del tren: " << tren->pesoTotal() << endl;
+  cout << "Añadiendo carga..." << endl;
   v1->cargar(400);
   tren->cargar(0, 400);
-  tren->cargar(40, 400);
-  cout << "Tren" << endl;
+  tren->cargar(40, 400); // Debe mostrar error
   cout << "Peso total del tren: " << tren->pesoTotal() << endl;
+  cout << "Descargando..." << endl;
   v1->descargar();
-  cout << "Tren" << endl;
   cout << "Peso total del tren: " << tren->pesoTotal() << endl;
+  cout << "========================================\n" << endl;
 
-  tren->reservar("Juan", 2);
+  cout << "========================================" << endl;
+  cout << "Reservas" << endl;
+  cout << "========================================" << endl;
+  tren->reservar("Juan", 9);
+  tren->reservar("Luis", 1);
+  tren->reservar("Carlos", 10); // Debe mostrar error
+  cout << "========================================\n" << endl;
 
   delete tren;
   return 0;

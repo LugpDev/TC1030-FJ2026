@@ -47,9 +47,28 @@ void Tren::reservar(string _nombre, int _asientos) {
     int folio = reservas.size() + 1;
     Reserva *reserva = new Reserva(_nombre, folio, _asientos);
     reservas.push_back(reserva);
-    cout << "Reserva realizada con éxito. Folio: " << folio << endl;
-  }
 
-  else
-    cout << "ERROR: No hay suficientes asientos disponibles." << endl;
+    int asientosRestantes = _asientos;
+    for (Vagon *v : vagones) {
+      VagonPasajeros *vp = dynamic_cast<VagonPasajeros *>(v);
+      if (vp) {
+        if (asientosRestantes > 0) {
+          int disponibles = vp->disponibles();
+          int aReservar = min(disponibles, asientosRestantes);
+          vp->reservar(aReservar);
+          asientosRestantes -= aReservar;
+        } else {
+          break;
+        }
+      }
+    }
+
+    cout << "Reserva para " << _nombre << " con folio " << folio << " por "
+         << _asientos << " asientos realizada exitosamente." << endl;
+  } else {
+    cout << "ERROR: La reserva para " << _nombre << " no pudo ser realizada "
+         << endl;
+    cout << "Asientos solicitados: " << _asientos
+         << ", Asientos disponibles: " << total << endl;
+  }
 }

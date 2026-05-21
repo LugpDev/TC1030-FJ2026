@@ -1,5 +1,7 @@
 #include "VagonPasajeros.h"
 
+using namespace std;
+
 VagonPasajeros::VagonPasajeros(int _num) {
   cupo = _num;
   reservados = 0;
@@ -18,3 +20,11 @@ void VagonPasajeros::mostrar(std::ostream &os) {
 }
 
 int VagonPasajeros::disponibles() { return cupo - reservados; };
+
+void VagonPasajeros::reservar(int _asientos) {
+  if (_asientos <= disponibles()) {
+    reservados += _asientos;
+  } else {
+    cout << "ERROR: No hay suficientes asientos disponibles." << endl;
+  }
+}

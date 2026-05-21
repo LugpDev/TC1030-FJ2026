@@ -13,6 +13,7 @@ public:
   double calcularPeso();
   void mostrar(std::ostream &os);
   int disponibles();
+  void reservar(int _asientos);
 };
 
 #endif // __VAGONPASAJEROS_H__
