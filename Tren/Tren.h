@@ -17,6 +17,8 @@ public:
   double pesoTotal();
   void agregarVagon(Vagon *nuevoVagon);
   void operator+(Vagon *nuevoVagon);
+  void cargar(int _i, double _carga);
+  void reservar(string _nombre, int _asientos);
 };
 
 #endif // __TREN_H__

@@ -15,3 +15,7 @@ void VagonCarga::mostrar(std::ostream &os) {
      << "Volumen de carga: " << volumen << "m3" << std::endl
      << "Peso: " << calcularPeso() << std::endl;
 }
+
+void VagonCarga::cargar(double _carga) { volumen += _carga; };
+
+void VagonCarga::descargar() { volumen = 0; };

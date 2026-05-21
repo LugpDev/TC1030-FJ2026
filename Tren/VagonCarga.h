@@ -12,6 +12,8 @@ public:
   VagonCarga(double _volumen, double _pesom3);
   double calcularPeso();
   void mostrar(std::ostream &os);
+  void cargar(double _carga);
+  void descargar();
 };
 
 #endif // __VAGONCARGA_H__

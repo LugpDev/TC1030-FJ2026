@@ -5,12 +5,14 @@
 
 class VagonPasajeros : public Vagon {
 private:
-  int num;
+  int cupo;
+  int reservados;
 
 public:
   VagonPasajeros(int _num);
   double calcularPeso();
   void mostrar(std::ostream &os);
+  int disponibles();
 };
 
 #endif // __VAGONPASAJEROS_H__
